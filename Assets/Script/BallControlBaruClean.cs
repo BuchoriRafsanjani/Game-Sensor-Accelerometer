@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class BallControlScript : MonoBehaviour {
-
+public class BallControlBaruClean : MonoBehaviour {
 
     Rigidbody2D rb;
 
@@ -27,8 +27,7 @@ public class BallControlScript : MonoBehaviour {
     GameObject loseText;
 
     // Use this for initialization
-    void Start()
-    {
+    void Start () {
 
         winText.gameObject.SetActive(false);
         loseText.gameObject.SetActive(false);
@@ -105,7 +104,7 @@ public class BallControlScript : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "DeathHoles")
+        if(collision.gameObject.tag == "DeathHoles")
         {
             YouLose();
         }
